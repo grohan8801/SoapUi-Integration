@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="AssociateSpecimenWithCultureProtocol" path="/api/Orders/CreateCultureProtocolOrder/85210108-67a2-4b2d-b652-aea070ea5b7b" id="0891ec73-fb2b-4d69-a84f-34d386563581" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="0891ec73-fb2b-4d69-a84f-34d386563581fileName">AssociateSpecimenWithCultureProtocol</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Method 1" id="ccb9bf8d-d368-4a25-b0c7-43496959a155" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="29c622e4-920b-4354-9e01-8c2147b5c911" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>${#Project#BaseURL}</con:endpoint>
+      <con:request>"bbd18619-6533-4ece-8035-a976a489395d"</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:jmsPropertyConfig/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

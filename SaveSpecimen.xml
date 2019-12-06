@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="SaveSpecimen" path="/api/specimens/SaveSpecimen" id="84fa30fd-37f7-4f39-aaed-5b3b1abd38be" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="84fa30fd-37f7-4f39-aaed-5b3b1abd38befileName">SaveSpecimen</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Method 1" id="3e4f27e1-fb80-4c35-be92-9ff3eefee2cf" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>401</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>text/plain; charset=utf-8</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:sav="https://bdisqa-ait3.cloudapp.net/api/specimens/SaveSpecimen">sav:Response</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="09aa56ad-88c0-4d3d-a3bd-c92066792480" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>${#Project#BaseURL}</con:endpoint>
+      <con:request>{
+	"identifier": "00000000-0000-0000-0000-000000000000",
+	"finalizedStatus": false,
+	"lastUpdated": "0001-01-01T00:00:00+00:00",
+	"isolates": [],
+	"orders": [],
+	"demographicProperties": [{
+		"identifier": "c40dbaae-9719-4b36-ae71-464c27705473",
+		"displayName": "Specimen Ordering Physician",
+		"resourceId": "Common_LookupFields_Specimen_OrderingPhysician",
+		"defaultSortOrder": 2147483647,
+		"isNew": false,
+		"isVisible": false,
+		"xmlMapping": "Demographics/OrderingPhysician",
+		"dataType": "string",
+		"lookupItems": [],
+		"isFreeTextField": false
+	},
+	{
+		"identifier": "5d58da14-d7b5-4239-a475-90a32e640c44",
+		"displayName": "Specimen Received By",
+		"resourceId": "Common_LookupFields_Specimen_ReceivedBy",
+		"defaultSortOrder": 2147483647,
+		"isNew": false,
+		"isVisible": false,
+		"xmlMapping": "Demographics/ReceivedBy",
+		"dataType": "string",
+		"lookupItems": [],
+		"isFreeTextField": false
+	},
+	{
+		"identifier": "93fd6170-6e58-4482-8a43-5353a6770faf",
+		"displayName": "Specimen Collected By",
+		"resourceId": "Common_LookupFields_Specimen_CollectedBy",
+		"defaultSortOrder": 2147483647,
+		"isNew": false,
+		"isVisible": false,
+		"xmlMapping": "Demographics/CollectedBy",
+		"dataType": "string",
+		"lookupItems": [],
+		"isFreeTextField": false
+	},
+	{
+		"identifier": "50c42d09-7ffa-4857-8d57-4383f42303af",
+		"displayName": "Specimen Type",
+		"resourceId": "Common_LookupFields_Specimen_SpecimenType",
+		"defaultSortOrder": 2147483647,
+		"isNew": false,
+		"isVisible": false,
+		"xmlMapping": "Demographics/SpecimenType",
+		"dataType": "string",
+		"lookupItems": [],
+		"isFreeTextField": false
+	},
+	{
+		"identifier": "86d6e362-eb66-4937-af9b-d6ebef74d2ec",
+		"displayName": "Specimen QC Type",
+		"resourceId": "Common_LookupFields_Specimen_QcType",
+		"defaultSortOrder": 2147483647,
+		"isNew": false,
+		"isVisible": false,
+		"xmlMapping": "Demographics/QcType",
+		"dataType": "string",
+		"lookupItems": [{
+			"identifier": "7be37e04-e8a8-4502-ab69-30c35d71254e",
+			"fieldIdentifier": "86d6e362-eb66-4937-af9b-d6ebef74d2ec",
+			"enabled": true,
+			"lastUpdated": "2019-08-01T12:34:40.9471975+00:00",
+			"name": "PosQC",
+			"resourceId": "Common_LookupItems_Specimen_QC_PosQC",
+			"displayName": "PosQC",
+			"lookupGroupings": [],
+			"lookupField": {
+				"identifier": "86d6e362-eb66-4937-af9b-d6ebef74d2ec",
+				"dataType": "string",
+				"displayName": "Specimen QC Type",
+				"xmlMapping": "Demographics/QcType",
+				"lastUpdated": "2019-08-01T12:34:40.9003451+00:00",
+				"isDisplayable": true,
+				"isGroupable": true,
+				"isWorkflowQueryable": true,
+				"isDataListVisible": true,
+				"isDataListConfigurable": true,
+				"isWorklistFilterable": true,
+				"isWorklistSortable": true,
+				"isOrderDefVisible": false,
+				"enabled": true,
+				"category": "demographics",
+				"resourceId": "Common_LookupFields_Specimen_QcType",
+				"sourceName": "ExtendedProperties",
+				"sourceObject": "Specimen",
+				"internalColumn": "SpecimenQcType",
+				"lookupGroups": [],
+				"lookupFieldExtendedProperties": {
+					"isCalculated": false
+				},
+				"operatorOptions": [{
+					"resourceId": "Common_LookupFields_Operations_In",
+					"value": "equalto"
+				},
+				{
+					"resourceId": "Common_LookupFields_Operations_NotIn",
+					"value": "notequalto"
+				},
+				{
+					"resourceId": "Common_LookupFields_Operations_IsNullOrEmpty",
+					"value": "isnullorempty"
+				},
+				{
+					"resourceId": "Common_LookupFields_Operations_IsNotNullOrEmpty",
+					"value": "isnotnullorempty"
+				}],
+				"sortOptions": [{
+					"resourceId": "Common_LookupFields_Sort_Ascending",
+					"value": true
+				},
+				{
+					"resourceId": "Common_LookupFields_Sort_Descending",
+					"value": false
+				}]
+			}
+		},
+		{
+			"identifier": "eb7ff122-634d-495b-bb40-95b712eaaa66",
+			"fieldIdentifier": "86d6e362-eb66-4937-af9b-d6ebef74d2ec",
+			"enabled": true,
+			"lastUpdated": "2019-08-01T12:34:40.9471975+00:00",
+			"name": "NegQC",
+			"resourceId": "Common_LookupItems_Specimen_QC_NegQC",
+			"displayName": "NegQC",
+			"lookupGroupings": [],
+			"lookupField": {
+				"identifier": "86d6e362-eb66-4937-af9b-d6ebef74d2ec",
+				"dataType": "string",
+				"displayName": "Specimen QC Type",
+				"xmlMapping": "Demographics/QcType",
+				"lastUpdated": "2019-08-01T12:34:40.9003451+00:00",
+				"isDisplayable": true,
+				"isGroupable": true,
+				"isWorkflowQueryable": true,
+				"isDataListVisible": true,
+				"isDataListConfigurable": true,
+				"isWorklistFilterable": true,
+				"isWorklistSortable": true,
+				"isOrderDefVisible": false,
+				"enabled": true,
+				"category": "demographics",
+				"resourceId": "Common_LookupFields_Specimen_QcType",
+				"sourceName": "ExtendedProperties",
+				"sourceObject": "Specimen",
+				"internalColumn": "SpecimenQcType",
+				"lookupGroups": [],
+				"lookupFieldExtendedProperties": {
+					"isCalculated": false
+				},
+				"operatorOptions": [{
+					"resourceId": "Common_LookupFields_Operations_In",
+					"value": "equalto"
+				},
+				{
+					"resourceId": "Common_LookupFields_Operations_NotIn",
+					"value": "notequalto"
+				},
+				{
+					"resourceId": "Common_LookupFields_Operations_IsNullOrEmpty",
+					"value": "isnullorempty"
+				},
+				{
+					"resourceId": "Common_LookupFields_Operations_IsNotNullOrEmpty",
+					"value": "isnotnullorempty"
+				}],
+				"sortOptions": [{
+					"resourceId": "Common_LookupFields_Sort_Ascending",
+					"value": true
+				},
+				{
+					"resourceId": "Common_LookupFields_Sort_Descending",
+					"value": false
+				}]
+			}
+		},
+		{
+			"identifier": "6ad44542-3b8c-48f1-8d23-973631f00c11",
+			"fieldIdentifier": "86d6e362-eb66-4937-af9b-d6ebef74d2ec",
+			"enabled": true,
+			"lastUpdated": "2019-08-01T12:34:40.9471975+00:00",
+			"name": "BTS",
+			"resourceId": "Common_LookupItems_Specimen_QC_BTS",
+			"displayName": "BTS",
+			"lookupGroupings": [],
+			"lookupField": {
+				"identifier": "86d6e362-eb66-4937-af9b-d6ebef74d2ec",
+				"dataType": "string",
+				"displayName": "Specimen QC Type",
+				"xmlMapping": "Demographics/QcType",
+				"lastUpdated": "2019-08-01T12:34:40.9003451+00:00",
+				"isDisplayable": true,
+				"isGroupable": true,
+				"isWorkflowQueryable": true,
+				"isDataListVisible": true,
+				"isDataListConfigurable": true,
+				"isWorklistFilterable": true,
+				"isWorklistSortable": true,
+				"isOrderDefVisible": false,
+				"enabled": true,
+				"category": "demographics",
+				"resourceId": "Common_LookupFields_Specimen_QcType",
+				"sourceName": "ExtendedProperties",
+				"sourceObject": "Specimen",
+				"internalColumn": "SpecimenQcType",
+				"lookupGroups": [],
+				"lookupFieldExtendedProperties": {
+					"isCalculated": false
+				},
+				"operatorOptions": [{
+					"resourceId": "Common_LookupFields_Operations_In",
+					"value": "equalto"
+				},
+				{
+					"resourceId": "Common_LookupFields_Operations_NotIn",
+					"value": "notequalto"
+				},
+				{
+					"resourceId": "Common_LookupFields_Operations_IsNullOrEmpty",
+					"value": "isnullorempty"
+				},
+				{
+					"resourceId": "Common_LookupFields_Operations_IsNotNullOrEmpty",
+					"value": "isnotnullorempty"
+				}],
+				"sortOptions": [{
+					"resourceId": "Common_LookupFields_Sort_Ascending",
+					"value": true
+				},
+				{
+					"resourceId": "Common_LookupFields_Sort_Descending",
+					"value": false
+				}]
+			}
+		}],
+		"isFreeTextField": false
+	},
+	{
+		"identifier": "32664495-936f-4bc9-85b6-5e2967e5ceb5",
+		"displayName": "Hospital Service",
+		"resourceId": "Common_LookupFields_Hospital_Service",
+		"defaultSortOrder": 2147483647,
+		"isNew": false,
+		"isVisible": false,
+		"xmlMapping": "Demographics/HospitalService",
+		"dataType": "string",
+		"lookupItems": [],
+		"isFreeTextField": false
+	}],
+	"collectionTime": "2019-08-21T00:00:00+05:30",
+	"receiptTime": "2019-08-21T00:00:00+05:30",
+	"accessionNumber": "Test001"
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:jmsPropertyConfig/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

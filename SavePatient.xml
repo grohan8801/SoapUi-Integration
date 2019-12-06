@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="SavePatient" path="/api/patients/SavePatient" id="9309283e-8b1a-41e8-9c31-37cbf4750689" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="9309283e-8b1a-41e8-9c31-37cbf4750689fileName">SavePatient</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="SavePatients" id="16bb6158-0fe9-4f95-a2a4-c07cfba4a5d6" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>0</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>0</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>0</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>404 401</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html; charset=iso-8859-1</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element>html</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:sav="https://localhost/api/patients/SavePatient">sav:Response</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>401</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:element xmlns:sav="https://localhost/api/patients/SavePatient">sav:Fault</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:sav="https://localhost/api/patients/SavePatient">sav:Response</con:element>
+    </con:representation>
+    <con:request name="Save" id="a6cb8fea-1d86-4c59-8e30-501a0a1f635e" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="Authorization" value="${#Project#Authorization}"/>
+  &lt;con:entry key="content-type" value="application/json"/>
+&lt;/xml-fragment></con:setting>
+      </con:settings>
+      <con:endpoint>${#Project#BaseURL}</con:endpoint>
+      <con:request>{
+	"identifier": "00000000-0000-0000-0000-000000000000",
+	"specimens": [],
+	"age": {
+		"number": -1,
+		"unit": 3
+	},
+	"demographicProperties": ${PatientProperties#DemographicProperties},
+	"birthdate": "${Patient_DataSource#Birthdate}",
+	"patientId": "${Patient_DataSource#PatientID}",
+	"title": "${Patient_DataSource#Title}",
+	"lastName": "${Patient_DataSource#LastName}",
+	"middleName": "${Patient_DataSource#MiddleName}",
+	"firstName": "${Patient_DataSource#FirstName}",
+	"suffix": "${Patient_DataSource#Suffix}",
+	"address1": "${Patient_DataSource#Address1}",
+	"address2": "${Patient_DataSource#Address2}",
+	"city": "${Patient_DataSource#City}",
+	"state": "${Patient_DataSource#Province}",
+	"country": "${Patient_DataSource#Country}",
+	"postalCode": "${Patient_DataSource#PostalCode}"
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:jmsPropertyConfig/>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="3f7a0ecf-34c8-4755-a3f4-2022227fb89e">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="48ae45d4-5616-419c-9c38-b746d7521e34">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="a515b593-a28a-481e-91bc-5372ec56b94b">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="9e6b2c9e-d833-4923-957a-89c11bc903bd">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="c51e2417-e999-4a1b-a035-41ce8698364c">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="0f109dfb-5536-44c1-927b-a068b05236b7">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="8905f474-acfd-4ba7-b9e9-d743ec0375e9">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="90a6978f-21c8-419b-ad48-a73195732b56">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="3f7a0ecf-34c8-4755-a3f4-2022227fb89e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="a515b593-a28a-481e-91bc-5372ec56b94b">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="0f109dfb-5536-44c1-927b-a068b05236b7">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="3f7a0ecf-34c8-4755-a3f4-2022227fb89e">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="a515b593-a28a-481e-91bc-5372ec56b94b">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="0f109dfb-5536-44c1-927b-a068b05236b7">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:resource>
