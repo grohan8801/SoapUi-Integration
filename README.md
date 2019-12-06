@@ -1,2 +1,0 @@
-# SoapUi-Integration
-SoapUi Integration
